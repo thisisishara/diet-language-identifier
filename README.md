@@ -31,6 +31,15 @@ This project is not yet open for contributions, however, the plan is to construc
 
 ## Training locally and perform continous model improvements
 ### Development environment setup
+#### Setting up the pre-commit hooks
+1. Install pre-commit using pip install pre-commit
+2. create .pre-commit-config.yaml in project root and add required repos
+3. run pre-commit install on root to install the hooks
+   - run pre-commit uninstall to uninstall hooks
+4. run pre-commit hooks
+   - run --all-files to manually run the hooks [optional + manual]
+   - pre-commit install --hook-type commit-msg [automate]
+
 _to be updated_
   
 ### Training Data Format
