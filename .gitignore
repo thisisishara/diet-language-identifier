@@ -162,5 +162,5 @@ cython_debug/
 .rasa
 .config
 .configs
-models
+**.tar.gz
 temp
