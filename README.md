@@ -42,6 +42,55 @@ This project is not yet open for contributions, however, the plan is to construc
 
 _Note:_ use conventional commits only, otherwise the commits will fail when pre-commit hooks are enabled
 
+#### Installing dependencies
+Install all dev dependencies by executing `pip install -r requirements-dev.txt` at the project root.
+
+#### Running the Rasa NLU server
+Simply execute `rasa run --enable-api --cors "*"` to run rasa REST API. Use the following curl request format to infer the language of an input. If DIET fails to categorize the input, the default intent given is `nlu_fallback`. The fallback threshold can be adjusted in the `config.yml`.
+```bash
+# Request
+curl --location 'http://localhost:5005/model/parse/' \
+--header 'Content-Type: application/json' \
+--data '{
+    "text": "hello there!"
+}'
+
+
+# Response
+{
+    "text": "hello there!",
+    "intent": {
+        "name": "en",
+        "confidence": 1.0
+    },
+    "entities": [],
+    "text_tokens": [
+        [
+            0,
+            5
+        ],
+        [
+            6,
+            11
+        ]
+    ],
+    "intent_ranking": [
+        {
+            "name": "en",
+            "confidence": 1.0
+        },
+        {
+            "name": "si",
+            "confidence": 3.740343742878632e-19
+        },
+        {
+            "name": "sin",
+            "confidence": 1.418158024045691e-20
+        }
+    ]
+}
+```
+#### Running finetuner web server
 _to be updated_
   
 ### Training Data Format
@@ -51,13 +100,19 @@ _to be updated_
 _to be updated_
 
 ### Training
-_to be updated_
+```bash
+rasa data validate  # check if trainng data and configs are in order
+rasa train nlu  # training the nlu model
+```
 
 ### Versioning
 _to be updated_
 
 ### Fine-tuning
-_to be updated_
+```bash
+rasa train nlu --finetune --epoch-fraction 0.2  # or
+rasa train nlu --finetune <model_name> --epoch-fraction 0.2  # leave the model name empty to fine-tune the latest model available
+```
 
 #### Manual fine-tuning 
 _to be updated_
