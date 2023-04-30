@@ -40,6 +40,8 @@ This project is not yet open for contributions, however, the plan is to construc
    - run --all-files to manually run the hooks [optional + manual]
    - pre-commit install --hook-type commit-msg [automate]
 
+_Note:_ use conventional commits only, otherwise the commits will fail when pre-commit hooks are enabled
+
 _to be updated_
   
 ### Training Data Format
