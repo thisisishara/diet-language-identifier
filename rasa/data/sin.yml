@@ -1,0 +1,36 @@
+version: "3.1"
+
+nlu:
+- intent: sin
+  examples: |
+    - aaa kollo
+    - hi meya
+    - oya kawda
+    - oya kohomada mewa danne
+    - oyata ba ehema deyak karanna
+    - oya bot kenek da
+    - oya kohomada bot kenek wage katha karanne
+    - eth oya mata aththa kenek wage
+    - mage PC eke software monawath wada karanne na
+    - chatGPT kiyanne mokakda
+    - mata hotline eka denna
+    - mata oyalage hotline eka ona
+    - mata aththa manussayek ta katha karanna puluwan da
+    - mata aththa minihek ekka katha karanna ona
+    - oyalage call center ekata reach wenne kohomada
+    - good morning machan
+    - sure ekata karamu
+    - eka maru
+    - eh ai?
+    - na mata ba
+    - ba
+    - na
+    - dan athi
+    - dan nawaththanna
+    - mata meka karanna ba
+    - ow mata puluwan
+    - good morning yaluwa
+    - gindara
+    - supiri
+    - ow ow
+    - ai form ekak
