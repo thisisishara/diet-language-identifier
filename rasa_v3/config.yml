@@ -29,7 +29,7 @@ pipeline:
     min_ngram: 2
     max_ngram: 6
   - name: components.nlu.classifiers.custom_diet_classifier.DIETClassifier
-    epochs: 500
+    epochs: 150
     constrain_similarities: true
   - name: FallbackClassifier
     threshold: 0.7
