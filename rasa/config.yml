@@ -9,7 +9,7 @@ assistant_id: diet-lang-identifier
 
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-# Although the language is set, it is not required for the current porject
+# Although the language is set, it is not required for the current project
 language: en
 
 pipeline:
@@ -28,7 +28,7 @@ pipeline:
     analyzer: char
     min_ngram: 2
     max_ngram: 6
-  - name: DIETClassifier
+  - name: components.nlu.classifiers.custom_diet_classifier.DIETClassifier
     epochs: 500
     constrain_similarities: true
   - name: FallbackClassifier
