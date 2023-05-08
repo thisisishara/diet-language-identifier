@@ -28,7 +28,7 @@ pipeline:
     analyzer: char
     min_ngram: 2
     max_ngram: 6
-  - name: components.nlu.classifiers.custom_diet_classifier.DIETClassifier
+  - name: DIETClassifier
     epochs: 150
     constrain_similarities: true
   - name: FallbackClassifier
